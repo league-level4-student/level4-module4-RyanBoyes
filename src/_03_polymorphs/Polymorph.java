@@ -12,9 +12,10 @@ public abstract class Polymorph {
    	 this.y = y;
     }
     
-    public void update(){
-   	 
-    }
+    public abstract void update();
+   
+   	
+    
     
     public abstract void draw(Graphics g);
 }
