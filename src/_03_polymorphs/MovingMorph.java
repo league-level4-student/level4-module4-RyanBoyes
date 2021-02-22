@@ -25,7 +25,19 @@ public class MovingMorph extends Polymorph{
 	@Override
 	public void update() {
 		// TODO Auto-generated method stub
-		x+=2;
+		if(x<400) {
+			x+=2;
+		}
+		else if(x>=400) {
+			if(y<=100) {
+				y-=2;
+			}
+			else if(y>100) {
+				x-=2;
+			}
+		}
+		
+		
 	}
 
 	
