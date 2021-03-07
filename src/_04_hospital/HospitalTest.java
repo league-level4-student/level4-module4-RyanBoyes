@@ -35,16 +35,20 @@ public class HospitalTest extends TestCase {
 
 	/* Fix asserts one at a time */
 	public void testDoctorsHaveSpecialties() throws Exception {
-		Doctor testDoctor = new Doctor();
-		assertEquals(false, testDoctor.performsSurgery());
-
+		
+		//Doctor testDoctor = new Doctor();
+		
+		//assertEquals(false, testDoctor.performsSurgery());
+		
+		
 		Doctor testSurgeon = new Surgeon();
 		assertEquals(true, testSurgeon.performsSurgery());
 
 		GeneralPractitioner testGP = new GeneralPractitioner();
 		assertEquals(true, testGP.makesHouseCalls());
 		assertEquals(false, testSurgeon.makesHouseCalls());
-		assertEquals(false, testDoctor.makesHouseCalls());
+		//assertEquals(false, testDoctor.makesHouseCalls());
+		
 	}
 
 	/* A doctor has a list of patients */

@@ -14,7 +14,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 
-public class MessageMorph extends Polymorph implements MouseListener{
+public class MessageMorph extends Polymorph{
 
 	protected int width = 50;
 	protected int height = 50;
@@ -25,10 +25,10 @@ public class MessageMorph extends Polymorph implements MouseListener{
 	MessageMorph(int x, int y) {
 		super(x, y);
 		// TODO Auto-generated constructor stub
-		frame.setBounds(0, 0, 900, 600);
+		
 		frame.add(panel);
 		panel.add(polyButton);
-		frame.addMouseListener(this);
+		
 	}
 
 	@Override
@@ -45,38 +45,5 @@ public class MessageMorph extends Polymorph implements MouseListener{
 		g.fillRect(350, 200, width, height);
 	}
 
-	@Override
-	public void mouseClicked(MouseEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void mousePressed(MouseEvent e) {
-		// TODO Auto-generated method stub
-		System.out.println(e.getX());
-	}
-
-	@Override
-	public void mouseReleased(MouseEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void mouseEntered(MouseEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void mouseExited(MouseEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
-
 	
-
-	
-
 }

@@ -5,13 +5,15 @@ import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.util.ArrayList;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.Timer;
 
-public class PolymorphWindow extends JPanel implements ActionListener{
+public class PolymorphWindow extends JPanel implements ActionListener, MouseListener{
     public static final int WIDTH = 900;
     public static final int HEIGHT = 600;
     
@@ -27,6 +29,7 @@ public class PolymorphWindow extends JPanel implements ActionListener{
     
     public void buildWindow(){
    	 window = new JFrame("IT'S MORPHIN' TIME!");
+   	 window.addMouseListener(this);
    	 window.add(this);
    	 window.getContentPane().setPreferredSize(new Dimension(500, 500));
    	 window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -72,4 +75,38 @@ public class PolymorphWindow extends JPanel implements ActionListener{
    	 }
    	 
     }
+
+	@Override
+	public void mouseClicked(MouseEvent e) {
+		// TODO Auto-generated method stub
+		if(e.getX()>350&&e.getX()<400) {
+			if(e.getY()>225&&e.getY()<275) {
+				System.out.println("MESSAGE");
+			}
+		}
+	}
+
+	@Override
+	public void mousePressed(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mouseReleased(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mouseEntered(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void mouseExited(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
 }
