@@ -25,7 +25,25 @@ public class Hospital {
 		return patients;
 	}
 	
-	
+	void assignPatientsToDoctors() {
+		int j = 0;
+		for(int i = 0; i<patients.size(); i++) {
+			if(doctors.get(j).getPatients().size()<3) {
+			try {
+				doctors.get(j).assignPatient(patients.get(i));
+			} catch (DoctorFullException e) {
+				e.printStackTrace();
+			}
+			}
+			else {
+				j++;
+				i--;
+			}
+			
+		}
+		
+		
+	}
 	
 	
 	
